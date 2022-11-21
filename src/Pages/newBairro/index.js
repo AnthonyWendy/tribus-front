@@ -19,12 +19,12 @@ const Page = () => {
         setError("");
 
         if (!name.trim()) {
-            error.push("Nome do produto é obrigatório");
+            error.push("Nome da linha é obrigatório");
         }
 
         console.log(name);
 
-        const json = await api.newBairro(name);
+        const json = await api.newLinha({name});
 
         if (json.error) {
             setError(json.error);
@@ -42,7 +42,6 @@ const Page = () => {
     return (
         <PageArea>
             <div className="container-cadastro">
-                <h2>Cadastro de Bairros</h2>
                 <div className="container">
                     <form onSubmit={handleSubmit}>
                         <div className="area-question">
@@ -57,10 +56,11 @@ const Page = () => {
                             />
                         </div>
                         <div className="buttons">
-                            <button>Cancelar</button>
-                            <button>Confirmar</button>
-                        </div>
+                            <button className="cancelar">Cancelar</button>
+                            <button className="confirmar">Confirmar</button>
+                    </div>
                     </form>
+                    
                 </div>
             </div>
         </PageArea>

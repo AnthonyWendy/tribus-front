@@ -17,6 +17,7 @@
     "react-material-ui-carousel": "^3.4.2",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
+    "react-script": "^2.0.5",
     "react-scripts": "5.0.1",
     "react-text-mask": "^5.4.3",
     "redux": "^4.2.0",
@@ -49,17 +50,17 @@
       "last 1 safari version"
     ]
   },
-
-  "import/no-anonymous-default-export": ["error", {
-    "allowArray": false,
-    "allowArrowFunction": false,
-    "allowAnonymousClass": false,
-    "allowAnonymousFunction": false,
-    "allowCallExpression": true, 
-    "allowNew": false,
-    "allowLiteral": false,
-    "allowObject": false
-  }]
-
+  "import/no-anonymous-default-export": [
+    "error",
+    {
+      "allowArray": false,
+      "allowArrowFunction": false,
+      "allowAnonymousClass": false,
+      "allowAnonymousFunction": false,
+      "allowCallExpression": true,
+      "allowNew": false,
+      "allowLiteral": false,
+      "allowObject": false
+    }
+  ]
 }
-

@@ -7,7 +7,7 @@ background: linear-gradient(107.56deg, #001064 0%, #2868A4 100%);
 
 box-sizing: border-box;
 margin: 0;
-padding: 20px;
+padding: 15vh 20px 20px 20px;
 height: 90vh;
 
 
@@ -15,6 +15,8 @@ height: 90vh;
     width: 80%;
     height: 50%;
     margin: auto;
+
+    display: block;
 
     border: 3px solid #D9D9D9;
     border-radius: 6.90705px;
@@ -25,53 +27,40 @@ height: 90vh;
 
     form{
         margin-top:20px;
-
         .area-question{
             padding: 10px 0px 10px 45px;
-            display: block;
-
-            width: 400px;
-
             input{
                 padding: 10px;
                 height: 50px;
                 width: 350px;
-
-                // transition: border-color 150ms ease-in-out;
-
-                &:hover,
-                :focus {
-                    border-color: #69CFFA;
-                }
             }
         }
-
+    }
+    
+    .buttons{
+        align-items: end;
+        height: 20vh;
         button {
             margin-left: 45px;
-            width: 350px;
-            height: 50px;
-
+            width: 22vh;
+            height: 7vh;
+    
             text-align: center;
             font-family: "Inter", sans-serif;
             font-weight: 800;
             font-size: 20px;
-            color: #fb0043;
-
-            background: #141414;
-            border-width: 0px 2px 2px 0px;
-            border-style: solid;
-            border-color: rgba(36, 36, 36, 0.56);
-
-            cursor: pointer;
-
-            &:hover {
-                border-color: #fb0043;
-            }
+            color: #FFFFFF;
+    
+            border-radius: 7.61248px;
+    
+         }
+        .cancelar{
+            background: #8B0000;
+    
         }
-
-
-
-
+        .confirmar{
+            background: #008B0E;
+        }
     }
 }
  

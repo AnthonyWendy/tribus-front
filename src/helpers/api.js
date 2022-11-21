@@ -5,6 +5,7 @@ import { doLogout } from "./authHandler";
 const BASEAPI = "http://localhost:5000";
 
 const apiFetchFile = async (endpoint, body) => {
+
     if (!body.token) {
         const token = Cookies.get("token");
         if (token) body.append("token", token);
@@ -128,6 +129,37 @@ const API = {
     getApi: () => {
         return BASEAPI;
     },
+
+    newLinha: async(name) => {
+        const json = await apiFetchPost("/linha/new", name);
+        return json;
+    },
+
+    updateLinha: async(body) => {
+        const json = await apiFetchFile("/linha/${id}", body);
+        return json;
+    },
+
+    newBairro: async(name) => {
+        const json = await apiFetchFile("/bairro/new", name);
+        return json;
+    },
+
+    updateBairro: async(body) => {
+        const json = await apiFetchFile("/bairro/${id}", body);
+        return json;
+    },
+
+    newReferencia: async(name) => {
+        const json = await apiFetchFile("/bairro/new", name);
+        return json;
+    },
+
+    updateReferencia: async(body) => {
+        const json = await apiFetchFile("/bairro/${id}", body);
+        return json;
+    }
+
 };
 
-export default () => API;
+export default  API;
