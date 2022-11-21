@@ -36,10 +36,14 @@ height: 90vh;
             }
         }
     }
-    
+
     .buttons{
         align-items: end;
         height: 20vh;
+        display: flex;
+        justify-content: right;
+        margin-top: -15px;
+        margin-right: 30px;
         button {
             margin-left: 45px;
             width: 22vh;

@@ -42,10 +42,18 @@ const Page = () => {
     return (
         <PageArea>
             <div className="container-cadastro">
+                <div className="navigation">
+                    <button>Linha</button>
+                    <button>Ponto de Referência</button>
+                    <button>Rota</button>
+                    <button>Itinerário</button>
+                </div>
                 <div className="container">
+                    
                     <form onSubmit={handleSubmit}>
+                        
                         <div className="area-question">
-                            <h3>Nome do linha</h3>
+                            <h3>Nome da linha</h3>
                             <input 
                                 autoFocus
                                 type="text"
@@ -55,6 +63,8 @@ const Page = () => {
                                 onChange={(e) => setName(e.target.value)}
                             />
                         </div>
+
+
                         <div className="buttons">
                             <button className="cancelar">Cancelar</button>
                             <button className="confirmar">Confirmar</button>
