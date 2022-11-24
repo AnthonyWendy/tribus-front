@@ -10,6 +10,25 @@ margin: 0;
 padding: 15vh 20px 20px 20px;
 height: 90vh;
 
+.navigation {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    button {
+        font-size: 24px;
+        background-color: rgb(0, 80, 125);
+        padding: 8px;
+        margin: 0 16px;
+        color: #FFF;
+
+        border: none;
+        border-radius: 10px;
+
+        cursor: pointer;
+    }
+}
 
 .container-cadastro{
     width: 80%;
@@ -24,6 +43,8 @@ height: 90vh;
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     color: #ffffff;
+
+    
 
     form{
         margin-top:20px;
