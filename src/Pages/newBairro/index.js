@@ -41,13 +41,14 @@ const Page = () => {
 
     return (
         <PageArea>
+            <div className="navigation">
+                <button>Linha</button>
+                <button>Ponto de Referência</button>
+                <button>Rota</button>
+                <button>Itinerário</button> 
+            </div>
             <div className="container-cadastro">
-                <div className="navigation">
-                    <button>Linha</button>
-                    <button>Ponto de Referência</button>
-                    <button>Rota</button>
-                    <button>Itinerário</button>
-                </div>
+                
                 <div className="container">
                     
                     <form onSubmit={handleSubmit}>
