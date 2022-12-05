@@ -54,6 +54,9 @@ const Page = () => {
 
         setDisabled(false);
 
+        console.log(json)
+        
+
         window.location.reload();
     }
 

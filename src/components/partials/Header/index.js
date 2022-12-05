@@ -34,7 +34,7 @@ const Header = (props) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="">
+                                <Link to="/signup">
                                     <img className="icon user" src="/usuario.png"/>
                                     Conta
                                 </Link>

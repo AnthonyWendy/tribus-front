@@ -51,10 +51,13 @@ const Page = () => {
 
     useEffect(() => {
         const getReferencias = async () => {
-            const referencias = await api.getReferencias(linha);
+            const referencias = await api.getReferenciasList(linha);
             setReferenciasList(referencias)
         }
-    })
+        getReferencias();
+    });
+
+    console.log(referenciasList)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -64,8 +67,9 @@ const Page = () => {
         const fData = new FormData();
 
         fData.append("nm_rota", name);
+        fData.append("horario", horario);
         fData.append("id_linha", linha);
-
+        fData.append("referencias", selectReferencias);
         if (fileField.current) {
             if (fileField.current.files.length > 0) {
                 for (let i = 0; i < fileField.current.files.length; i++) {
@@ -74,11 +78,9 @@ const Page = () => {
             }
         }
 
-        if (!name) {
-            alert("Nome do ponto de referencia é obrigatório!");
-        }
-
-        const json = await api.newReferencia({name});
+        console.log(fData)
+        
+        const json = await api.newRota(fData);
 
         if (json.error) {
             setError(json.error);
@@ -93,7 +95,7 @@ const Page = () => {
         window.location.reload();
     }
 
-    
+    const [selectLinhas, setSelectLinhas] = useState([])
 
     const handleChange = (event) => {
         const {
@@ -181,7 +183,7 @@ const Page = () => {
                                 labelId="demo-multiple-checkbox-label"
                                 id="demo-multiple-checkbox"
                                 multiple
-                                value={selectReferencia}
+                                value={referenciasList}
                                 onChange={handleChange}
                                 input={<OutlinedInput />}
                                 renderValue={(selected) => {

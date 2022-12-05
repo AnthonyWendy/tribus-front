@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 // import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/signUp";
+import Home from "./Pages/Home";
 
 import NotFound from "./Pages/notFound";
 import ConfigLinha from "./Pages/Configuracao/linha"
@@ -15,7 +16,7 @@ import { Private } from "./components/Private";
 export default () => {
     return (
         <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
             
             <Route path="/login" element={<Login />} />
 

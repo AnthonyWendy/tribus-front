@@ -163,6 +163,15 @@ const API = {
     updateReferencia: async(body) => {
         const json = await apiFetchFile("/bairro/${id}", body);
         return json;
+    },
+
+    newRota: async(body) => {
+        const json = await apiFetchFile("/rota/new", body);
+        return json;
+    },
+
+    getReferenciasList: async (body) => {
+        const json = await apiFetchGet("/referencia/", body);
     }
 
 };
