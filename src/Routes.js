@@ -6,7 +6,9 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/signUp";
 
 import NotFound from "./Pages/notFound";
-import newBairro from "./Pages/newBairro";
+import ConfigLinha from "./Pages/Configuracao/linha"
+import ConfigReferencia from "./Pages/Configuracao/referencia"
+import ConfigRota from "./Pages/Configuracao/rota"
 
 import { Private } from "./components/Private";
 
@@ -19,10 +21,11 @@ export default () => {
 
             <Route path="/signup" element={<SignUp />} />
 
-            <Route
-                path="/cadastro/bairro"
-                element={<Private component={newBairro} />}
-            />
+            <Route path="/config/new/linha" element={<ConfigLinha/>} />
+
+            <Route path="/config/new/referencia" element={<ConfigReferencia/>} />
+            
+            <Route path="/config/new/rota" element={<ConfigRota/>} />
 
             <Route path="/*" element={<NotFound />} />
         </Routes>

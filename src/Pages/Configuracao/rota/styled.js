@@ -16,7 +16,8 @@ height: 90vh;
 
     width: 100%;
 
-    button {
+    a {
+        text-decoration: none;
         font-size: 24px;
         background-color: rgb(0, 80, 125);
         padding: 8px;
@@ -27,6 +28,10 @@ height: 90vh;
         border-radius: 10px;
 
         cursor: pointer;
+    }
+
+    .rota{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #91BDFF;
     }
 }
 
@@ -48,28 +53,58 @@ height: 90vh;
 
     form{
         margin-top:20px;
-        .area-question{
+        .area-question, .area-question_duo{
             padding: 10px 0px 10px 45px;
-            input{
+
+            select,input{
+                border-radius: 7px;
                 padding: 10px;
                 height: 50px;
-                width: 350px;
+                width: 97%;
+            }
+
+            select{
+                cursor: pointer;
+            }
+        }
+
+        .area-question_duo{
+            display: flex;
+            
+            .name{
+                width: 45%;
+            }
+
+            .img{
+                input{
+                    width: 90%;
+                    height: 5vh;
+                    cursor: pointer;
+                }
+            }
+
+            .area-linha{
+                width: 45%;
+
             }
         }
     }
 
     .buttons{
         align-items: end;
-        height: 20vh;
+        height: 15vh;
         display: flex;
         justify-content: right;
         margin-top: -15px;
         margin-right: 30px;
+
         button {
             margin-left: 45px;
             width: 22vh;
             height: 7vh;
-    
+
+            cursor: pointer;
+
             text-align: center;
             font-family: "Inter", sans-serif;
             font-weight: 800;
@@ -87,6 +122,22 @@ height: 90vh;
             background: #008B0E;
         }
     }
+
+    .linhas{
+        .selectLinha{
+            outline: none;
+            background: #ffffff;
+            border-radius: 7px;
+            height: 50px;
+            width: 97%;
+        }
+    }
+
+
+
+
+
+
 }
  
     

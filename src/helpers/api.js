@@ -140,6 +140,11 @@ const API = {
         return json;
     },
 
+    getLinhas: async () => {
+        const json = await apiFetchGet("/linha/");
+        return json;
+    },
+
     newBairro: async(name) => {
         const json = await apiFetchFile("/bairro/new", name);
         return json;
@@ -150,8 +155,8 @@ const API = {
         return json;
     },
 
-    newReferencia: async(name) => {
-        const json = await apiFetchFile("/bairro/new", name);
+    newReferencia: async(body) => {
+        const json = await apiFetchFile("/referencia/new", body);
         return json;
     },
 

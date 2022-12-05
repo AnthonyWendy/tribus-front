@@ -1,6 +1,7 @@
 import React, { useState, } from "react";
-import api from "../../helpers/api";
-import { doLogin } from "../../helpers/authHandler";
+import { Link } from "react-router-dom";
+import api from "../../../helpers/api";
+import { doLogin } from "../../../helpers/authHandler";
 
 
 import { PageArea } from "./styled";
@@ -42,10 +43,10 @@ const Page = () => {
     return (
         <PageArea>
             <div className="navigation">
-                <button>Linha</button>
-                <button>Ponto de Referência</button>
-                <button>Rota</button>
-                <button>Itinerário</button> 
+                <Link to="/config/new/linha">Linha</Link>
+                <Link to="/config/new/referencia">Ponto de Referência</Link>
+                <Link to="/config/new/rota">Rota</Link>
+                <Link to="/config/new/itinerario">Itinerário</Link>
             </div>
             <div className="container-cadastro">
                 

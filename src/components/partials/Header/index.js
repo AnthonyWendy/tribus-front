@@ -28,9 +28,9 @@ const Header = (props) => {
                     <nav>
                         <ul>
                             <li>
-                                <Link to="/cadastro">
+                                <Link to="/config">
                                     <img className="icon" src="/more.png"/>
-                                    Cadastrar
+                                    Configuração
                                 </Link>
                             </li>
                             <li>
